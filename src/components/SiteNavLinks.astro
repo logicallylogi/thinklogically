@@ -1,0 +1,12 @@
+---
+import Link from "./Link.astro";
+import LanguageSelector from "./LanguageSelector.astro";
+---
+<span>
+                <Link to="/" classList="header-link md:inline md:p-2 mt-4 md:space-x-8">Home</Link>
+                <Link to="/about" classList="header-link md:inline md:p-2 mt-4 md:space-x-8">About</Link>
+                <Link to="/pricing" classList="header-link md:inline md:p-2 mt-4 md:space-x-8">Pricing</Link>
+                <Link to="/support" classList="header-link md:inline md:p-2 mt-4 md:space-x-8">Support</Link>
+                <span class="md:inline block p-2 mt-4 space-x-8"><LanguageSelector/></span>
+                <span class="md:hidden p-2 mt-4 space-x-8 block"><Link to="/app" classList="button header-link inline">Open App</Link></span>
+</span>

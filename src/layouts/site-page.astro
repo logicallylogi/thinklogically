@@ -1,0 +1,46 @@
+---
+import {Image} from 'astro:assets'
+import Primary from './root.astro'
+import type {LocaleFile} from "@locales/types.ts";
+import Link from '@components/Link.astro'
+import LanguageSelector from '@components/LanguageSelector.astro'
+import SiteNav from '@components/SiteNavLinks.astro'
+import logo from "@assets/logo.svg";
+import allLocales from '@locales/all'
+
+const {page} = Astro.props;
+const locale: LocaleFile = allLocales[Astro.currentLocale]
+const title = locale[page].title;
+---
+<Primary title={title}>
+    <div x-data="{ openNav: false }">
+    <div class="inline mx-20 w-full">
+    <nav class=" flex items-center">
+        <Link to="/" classList="mr-10 inline-flex header-link items-center">
+            <Image src={logo} class:list="h-12" alt="Site Logo"/>
+            <span class="self-center text-xl font-semibold whitespace-nowrap">{title}</span>
+        </Link>
+        <div class="hidden items-center m-2.5 md:inline-block">
+        <SiteNav/>
+        </div>
+        <div class="m-2.5 ml-auto hidden md:flex">
+            <Link to="/app" classList="button py-3 px-5 m-0 inline">Launch</Link>
+        </div>
+        <button @click="openNav=!openNav;" class="md:hidden inline-flex ml-auto mr-5" aria-controls="navbar"
+                aria-expanded="false">
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+    </nav>
+    </div>
+    <div x-show="openNav" class="md:hidden inline-block items-center m-2.5" id="navbar">
+        <SiteNav />
+    </div>
+    </div>
+    <div class="container" lang={locale}>
+        <slot />
+    </div>
+    <script src="../assets/darkmode.js"></script>
+</Primary>

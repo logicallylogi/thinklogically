@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    html {
+        font-family: "Open Sans", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: auto;
+        rtl: space-x-reverse;
+    }
+
+    code, .code {
+        font-family: "JetBrains Mono", monospace;
+    }
+
+    .header-link {
+        @apply link-styles block py-2.5 m-0;
+        text-decoration: none;
+    }
+
+    .text-primary {
+        @apply mb-4 tracking-tight font-extrabold
+    }
+
+    .link-styles {
+        @apply underline py-2 px-3 md:p-0 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700
+    }
+
+    h1 {
+        @apply text-primary text-4xl
+    }
+
+    h2 {
+        @apply text-primary text-3xl
+    }
+
+    h3 {
+        @apply text-primary text-2xl
+    }
+
+    h4 {
+        @apply text-primary text-xl
+    }
+
+    h5 {
+        @apply text-primary text-lg
+    }
+
+    p, a, button {
+        @apply mb-4 text-base tracking-tight
+    }
+
+    button, .button {
+        @apply text-white hover:text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center;
+        text-decoration: none;
+    }
+
+    .hide-on-mobile {
+        @apply hidden md:flex md:w-auto md:order-1
+    }
+
+    .secondary-button {
+        @apply button bg-transparent hover:bg-gray-100 dark:hover:bg-gray-700;
+        text-decoration: none;
+    }
+
+    .container {
+        @apply w-full px-24 pt-5 pb-10
+    }
+
+    a {
+        @apply link-styles
+    }
+}

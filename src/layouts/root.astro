@@ -1,0 +1,43 @@
+---
+import {ViewTransitions} from 'astro:transitions';
+import '../assets/primary.css'
+import logo from '../assets/logo.svg'
+import '@fontsource/jetbrains-mono';
+import '@fontsource/open-sans';
+import '@fontsource-variable/noto-serif';
+import allLocales from '@locales/all'
+
+const locale = allLocales[Astro.currentLocale]
+const description = locale.description;
+
+const pageTitle: string = `${Astro.props.title} - ${locale.name}`
+---
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="icon" type="image/svg+xml" href={logo.src}/>
+
+    <title>{pageTitle}</title>
+    <meta name="title" content={pageTitle}/>
+    <meta name="description" content={description}/>
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content={Astro.url}/>
+    <meta property="og:title" content={pageTitle}/>
+    <meta property="og:description" content={description}/>
+    <meta property="og:image" content="/background.png"/>
+
+    <meta property="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:url" content={Astro.url}/>
+    <meta property="twitter:title" content={pageTitle}/>
+    <meta property="twitter:description" content={description}/>
+    <meta property="twitter:image" content="/background.png"/>
+    <meta name="generator" content={Astro.generator}/>
+    <ViewTransitions/>
+</head>
+<body class="min-w-full bg-white dark:bg-gray-900 text-gray-900 dark:dark:text-white" transition:animate="fade">
+<slot/>
+</body>
+</html>

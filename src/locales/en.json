@@ -1,0 +1,44 @@
+{
+  "name": "Logically",
+    "description": "A simple, logical, and easy to use static site generator.",
+  "index": {
+    "title": "Logically",
+    "description": "This is a simple about page.",
+    "elements": [
+      {
+        "type": "p",
+        "content": "This is a simple about page."
+      }
+    ]
+  },
+  "about": {
+    "title": "About",
+    "description": "This is a simple about page.",
+    "elements": [
+      {
+        "type": "p",
+        "content": "This is a simple about page."
+      }
+    ]
+  },
+  "app": {
+    "title": "About",
+    "description": "This is a simple about page.",
+    "elements": [
+      {
+        "type": "p",
+        "content": "This is a simple about page."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Pricing",
+    "description": "Our prices are reasonable, affordable, and simple",
+    "elements": []
+  },
+  "support": {
+    "title": "Support",
+    "description": "Getting support through Logically's Support portal can be as simple as contacting our automated agent, making a post on our forums, or emailing support at support@logically.cc!",
+    "elements": []
+  }
+}

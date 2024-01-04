@@ -1,0 +1,39 @@
+---
+import {Image} from 'astro:assets'
+import en from '@assets/flags/en.svg';
+import es from '@assets/flags/es.svg';
+
+const flags = {
+    en,
+    es
+}
+const flag = flags[Astro.currentLocale];
+---
+<div x-data="{ openLang: false }">
+    <div x-show="openLang" class="my-4 list-none divide-y divide-gray-100 rounded-lg shadow flex"
+         id="language-dropdown-menu">
+        <ul class="py-2" role="none">
+            <li>
+                <a href="/en" role="menuitem">
+                    <div class="inline-flex items-center">
+                        <Image src={en} class="h-5 w-5 rounded-full me-2" alt="english"/>
+                        English
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/es" role="menuitem">
+                    <div class="inline-flex items-center">
+                        <Image src={es} class="h-5 w-5 rounded-full me-2" alt="espa&ntilde;ol"/>
+                        Espa&ntilde;ol
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <span @click="openLang=!openLang;"
+          x-show="!openLang"
+          class="inline-flex items-center header-link">
+<Image src={flag} class="h-5 w-5 rounded-full me-2" alt="Current Language"/>
+</span>
+</div>

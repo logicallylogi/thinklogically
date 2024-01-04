@@ -1,0 +1,45 @@
+---
+import Template from '@layouts/site-page.astro';
+import Link from '@components/Link.astro';
+import support from '@assets/images/support.jpg';
+import {Image} from 'astro:assets'
+---
+<Template page="support">
+    <section>
+        <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+            <h2 class="mb-8 text-4xl tracking-tight font-extrabold">Logically Supported</h2>
+            <div class="grid pt-8 text-left border-t border-gray-200 md:gap-16 dark:border-gray-700 md:grid-cols-2">
+                <div>
+                    <div class="mb-10">
+                        <h2 class="flex items-center mb-4 text-lg font-medium">
+                            <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+                            Contacting Customer Support
+                        </h2>
+                        <p class="text-gray-500 dark:text-gray-400">The easiest way to get in contact with our support team is via email at <a href="mailto:support@logically.cc">support@logicaly.cc</a>. Our team is volunteer-based, and we may not be able to respond immediately, so please be patient.</p>
+                    </div>
+                    <div class="mb-10">
+                        <h2 class="flex items-center mb-4 text-lg font-medium">
+                            <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+                            In Crisis?
+                        </h2>
+                        <p class="text-gray-500 dark:text-gray-400">Using our <Link to="/app">app</Link> will give you access to a Lifeline feature. Lifeline will ask you a short series of questions to evaluate your mental state and offer a resource that'll be most likely to help.</p>
+                        <p class="text-gray-500 dark:text-gray-400">If the resources suggested do not help, Lifeline can offer more upon request. We primarily recommend lifeline services, such as <a href='https://www.trevorproject.org'>The Trevor Project</a>, <a href='https://www.crisistextline.org'>The Crisis Textline</a>, and <a href='https://988lifeline.org'>The Suicide Hotline</a>.</p>
+                        <p class="text-gray-500 dark:text-gray-400">If you are in immediate danger, please call 911 or your local emergency services.</p>
+                    </div>
+                </div>
+                <div>
+                    <Image src={support} alt="Person with a computer, headphones, and pencil"></Image>
+                </div>
+            </div>
+            <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+                <h2 class="flex items-center mb-4 text-lg font-medium">
+                    <svg class="flex-shrink-0 mr-2 w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>
+                    Submitting Ideas
+                </h2>
+                <p class="text-gray-500 dark:text-gray-400">We have a "Inspiration" program for this purpose! Email us your idea at <a href="mailto:inspire@logically.cc">inspire@logically.cc</a></p>
+                <p class="text-gray-500 dark:text-gray-400">If your idea is accepted, you will be notified via email and be given the chance to provide one (1) social media link to attach to the Credits section of that specific module or feature. You are free to submit multiple ideas for more social media links added.</p>
+                <p>Some terms apply. Go to <Link to="/legal/inspiration">Inspiration Terms & Conditions</Link> to learn more. By emailing an idea, you accept these terms.</p>
+            </div>
+        </div>
+    </section>
+</Template>

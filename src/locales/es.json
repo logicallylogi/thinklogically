@@ -1,0 +1,14 @@
+{
+  "name": "Logically",
+  "description": "Logically",
+  "index": {
+    "title": "Logically",
+    "description": "This is a simple about page.",
+    "elements": [
+      {
+        "type": "p",
+        "content": "This is a simple about page."
+      }
+    ]
+  }
+}

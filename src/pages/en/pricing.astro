@@ -1,0 +1,114 @@
+---
+import Check from '@assets/icons/check.svg';
+import {Image} from 'astro:assets';
+import Template from '@layouts/site-page.astro';
+---
+<Template page="pricing">
+    <section class="bg-white dark:bg-gray-900">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+            <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+                <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Designed for business teams like yours</h2>
+                <p class="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+            </div>
+            <div class="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 xl:gap-10 lg:space-y-0">
+                <!-- Item -->
+                <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                    <h3 class="mb-4 text-2xl font-semibold">Coins - 500</h3>
+                    <div class="flex justify-center items-baseline mt-8 mb-2">
+                        <span class="mr-2 text-5xl font-extrabold">$0.50</span>
+                    </div>
+                    <span class="text-gray-500 dark:text-gray-400 mb-8">(no limit, item can be gifted)</span>
+                    <!-- List -->
+                    <ul role="list" class="mb-8 space-y-4 text-left">
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <Image src={Check} alt="checkmark" class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" />
+                            <span>500 In-App Coins</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <Image src={Check} alt="checkmark" class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" />
+                            <span>No Usage Restrictions</span>
+                            <span>Use what you pay for</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <Image src={Check} alt="checkmark" class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" />
+                            <span>Request Refund anytime!</span>
+                        </li>
+                    </ul>
+                    <button disabled class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900">Purchase</button>
+                </div>
+                <!-- Item -->
+                <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                    <h3 class="mb-4 text-2xl font-semibold">Streak Protection</h3>
+                    <div class="flex justify-center items-baseline mt-8 mb-2">
+                        <span class="mr-2 text-5xl font-extrabold">$1</span>
+                    </div>
+                    <span class="text-gray-500 dark:text-gray-400 mb-8">(max of 2 purchased per week, item can be gifted)</span>
+                    <!-- List -->
+                    <ul role="list" class="mb-8 space-y-4 text-left">
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <Image src={Check} alt="checkmark" class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" />
+                            <span>Prevent a loss of streak</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <Image src={Check} alt="checkmark" class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" />
+                            <span>Activates automatically</span>
+                        </li>
+                    </ul>
+                    <button disabled class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900">Purchase</button>
+                </div>
+                <!-- Monthly Bundle -->
+                <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                    <h3 class="mb-4 text-2xl font-semibold">Ad-Free Basic</h3>
+                    <div class="flex justify-center items-baseline mt-8 mb-2">
+                        <span class="mr-2 text-5xl font-extrabold">$1</span>
+                        <span class="text-gray-500 dark:text-gray-400">/month</span>
+                    </div>
+                    <span class="text-gray-500 dark:text-gray-400 mb-8">(limit one per user, item can be gifted)</span>
+                    <!-- List -->
+                    <ul role="list" class="mb-8 space-y-4 text-left">
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <Image src={Check} alt="checkmark" class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" />
+                            <span>No ads, promotions, or sponsored content</span>
+                        </li>
+                    </ul>
+                    <button disabled class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get started</button>
+                </div>
+                <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                    <h3 class="mb-4 text-2xl font-semibold">Ad-Free Plus</h3>
+                    <div class="flex justify-center items-baseline mt-8 mb-2">
+                        <span class="mr-2 text-5xl font-extrabold">$5</span>
+                        <span class="text-gray-500 dark:text-gray-400">/month</span>
+                    </div>
+                    <span class="text-gray-500 dark:text-gray-400 mb-8">(limit one per user, item can be gifted)</span>
+                    <!-- List -->
+                    <ul role="list" class="mb-8 space-y-4 text-left">
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <Image src={Check} alt="checkmark" class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" />
+                            <span>No ads, promotions, or sponsored content</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <Image src={Check} alt="checkmark" class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" />
+                            <span>1 <strong>free</strong> Streak Protection per week</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <!-- Icon -->
+                            <Image src={Check} alt="checkmark" class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" />
+                            <span>250 coins per week</span>
+                        </li>
+                    </ul>
+                    <span class="text-gray-500 dark:text-gray-400 mb-8">All items combined are a $6 value</span>
+                    <button disabled class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white  dark:focus:ring-primary-900">Get started</button>
+                </div>
+            </div>
+            <p class="my-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">The prices listed do not account for sales tax or processing fees. All transactions are handled by Stripe, and an additional fee of $0.30 plus $0.05 per dollar is charged.</p>
+        </div>
+    </section>
+</Template>

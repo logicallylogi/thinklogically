@@ -1,0 +1,19 @@
+---
+import {Page} from '@locales/types';
+
+interface Props {
+    page: Page
+}
+
+const {page} = Astro.props;
+const {title, description} = page;
+---
+{
+    page.elements.map((element) => {
+        const name = element.type
+        return (
+        <Fragment set:html={`<${name}>${element.content}</${name}>`}/>
+            )
+
+        })
+    }
